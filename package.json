@@ -1,0 +1,20 @@
+{
+  "name": "obsidian-oracle-syntax-highlight",
+  "version": "1.0.0",
+  "description": "Oracle SQL / PL/SQL syntax highlighting for Obsidian",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "test": "node esbuild.config.mjs test && node test/out/tokenizer.test.js && node test/out/formatter.test.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@codemirror/state": "^6.4.0",
+    "@codemirror/view": "^6.26.0",
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.21.0",
+    "obsidian": "latest",
+    "typescript": "^5.4.0"
+  }
+}

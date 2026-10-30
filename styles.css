@@ -1,0 +1,49 @@
+/*
+ * Oracle Syntax Highlight
+ * Colours come from the active theme's code variables, so it matches the rest of your notes.
+ * The `, .ora-x *` selectors win over any highlighting Obsidian itself applies (e.g. ```sql).
+ * Override any class in a CSS snippet to customise.
+ */
+
+.ora-keyword, .ora-keyword * { color: var(--code-keyword) !important; }
+.ora-type, .ora-type * { color: var(--code-property) !important; }
+.ora-function, .ora-function * { color: var(--code-function) !important; }
+.ora-package, .ora-package * { color: var(--code-function) !important; font-weight: 600; }
+.ora-constant, .ora-constant * { color: var(--code-value) !important; }
+.ora-number, .ora-number * { color: var(--code-value) !important; }
+.ora-string, .ora-string * { color: var(--code-string) !important; }
+.ora-quoted-ident, .ora-quoted-ident * { color: var(--code-normal) !important; font-style: italic; }
+.ora-comment, .ora-comment * { color: var(--code-comment) !important; font-style: italic; }
+.ora-hint, .ora-hint * { color: var(--code-important) !important; font-style: italic; }
+.ora-exception, .ora-exception * { color: var(--code-important) !important; font-weight: 600; }
+.ora-variable, .ora-variable * { color: var(--code-tag) !important; }
+.ora-label, .ora-label * { color: var(--code-tag) !important; font-weight: 600; }
+.ora-attribute, .ora-attribute * { color: var(--code-keyword) !important; font-style: italic; }
+.ora-operator, .ora-operator * { color: var(--code-operator) !important; }
+.ora-punctuation, .ora-punctuation * { color: var(--code-punctuation) !important; }
+.ora-sqlplus, .ora-sqlplus * { color: var(--code-important) !important; font-weight: 600; }
+
+/* Buttons on Oracle code blocks in reading view (shown on hover, like Obsidian's own Copy) */
+pre:has(> .ora-buttons) { position: relative; }
+.ora-buttons {
+  position: absolute;
+  top: var(--size-4-1, 4px);
+  right: var(--size-4-1, 4px);
+  display: flex;
+  gap: var(--size-4-1, 4px);
+  opacity: 0;
+  transition: opacity 120ms ease-in-out;
+}
+pre:hover > .ora-buttons,
+.ora-buttons:focus-within { opacity: 1; }
+.ora-buttons button {
+  font-size: var(--font-ui-smaller);
+  padding: var(--size-2-1, 2px) var(--size-4-2, 8px);
+  height: auto;
+  color: var(--text-muted);
+  background: var(--background-primary-alt);
+  box-shadow: none;
+  border: 1px solid var(--background-modifier-border);
+  cursor: pointer;
+}
+.ora-buttons button:hover { color: var(--text-normal); }

@@ -1,0 +1,9 @@
+{
+  "id": "oracle-syntax-highlight",
+  "name": "Oracle Syntax Highlight",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Syntax highlighting for Oracle SQL, PL/SQL and SQL*Plus in code blocks (reading view and editor).",
+  "author": "Mateusz Papuga",
+  "isDesktopOnly": false
+}
